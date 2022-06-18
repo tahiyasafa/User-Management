@@ -1,8 +1,8 @@
 import React from 'react'
-
+import { v4 as uuid } from 'uuid';
 export const View = ({users}) => {
   return users.map(user=>(
-      <tr key={user.firstName+user.dob}>
+      <tr key={uuid()}>
           <td>{user.firstName+' '+user.lastName}</td>
           <td>{user.gender}</td>
           <td>{user.dob}</td>
